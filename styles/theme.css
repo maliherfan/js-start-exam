@@ -194,7 +194,7 @@ body {
 
 /* responsive part */
 
-@media (max-width:880px) {
+@media (max-width:900px) {
     .weather-condition .weather-forecast .each-row .day {
         width: 25%;    
     }
