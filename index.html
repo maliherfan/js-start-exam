@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forcasting</title>
+    <link rel="stylesheet" type="text/css" href="styles/theme.css">  
+</head>
+
+<body>
+    <div class="container">
+        <div class="date-location">
+            <!-- choose location to see weather condition -->
+            <div class="location">
+                <input type="text" placeholder="تهران، تهران">
+            </div>
+            <div class="date">
+                <h2>سه شنبه 14 شهریور</h2>
+            </div>
+        </div>
+        <div class="weather-condition">
+            <!-- see weather details' of related location -->
+            <div class="weather-detail">
+                <img src="images/day-big-icon.png" alt="">
+                <h2>14&deg;</h2>
+                <h3>باران ملایم</h3>
+                <h4>21&deg; حداکثر &nbsp; &deg;17 حداقل</h4>
+            </div>
+            <!-- forcasting next week weather condition of related location  -->
+            <div class="weather-forecast">
+                <div class="first-row">
+                    <img src="images/calender.png" alt="">
+                    <h2>پیش بینی روزهای آینده</h2>
+                </div>
+
+                <div class="each-row">
+                    <div class="day">چهارشنبه</div>
+                    <div class="weather-icon"><img src="images/wednesday.png" alt=""></div>
+                    <div class="max-temp">18&deg; حداکثر</div>
+                    <div class="min-temp">11&deg; حداقل</div>
+                </div>
+                <div class="each-row">
+                    <div class="day">پنج شنبه</div>
+                    <div class="weather-icon"><img src="images/thursday.png" alt=""></div>
+                    <div class="max-temp">15&deg; حداکثر</div>
+                    <div class="min-temp">10&deg; حداقل</div>
+                </div>
+                <div class="each-row">
+                    <div class="day">جمعه</div>
+                    <div class="weather-icon"><img src="images/friday.png" alt=""></div>
+                    <div class="max-temp">12&deg; حداکثر</div>
+                    <div class="min-temp">7&deg; حداقل</div>
+                </div>
+                <div class="each-row">
+                    <div class="day">شنبه</div>
+                    <div class="weather-icon"><img src="images/saturday.png" alt=""></div>
+                    <div class="max-temp">9&deg; حداکثر</div>
+                    <div class="min-temp">5&deg; حداقل</div>
+                </div>
+                <div class="each-row">
+                    <div class="day">یک شنبه</div>
+                    <div class="weather-icon"><img src="images/sunday.png" alt=""></div>
+                    <div class="max-temp">14&deg; حداکثر</div>
+                    <div class="min-temp">11&deg; حداقل</div>
+                </div>
+                <div class="each-row">
+                    <div class="day">دوشنبه</div>
+                    <div class="weather-icon"><img src="images/monday.png" alt=""></div>
+                    <div class="max-temp">24&deg; حداکثر</div>
+                    <div class="min-temp">17&deg; حداقل</div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="footer">
+    </div>
+
+    <!-- change page theme according to time -->
+    <script>
+        var now = new Date();
+        var hours = now.getHours();
+        document.write('<style type="text/css">');
+        //19-4 night
+        if (hours > 18 || hours < 5) {
+            document.write('body{background:linear-gradient(to bottom, #08244f, #134cb5, #0b42ab);} .weather-condition .weather-forecast{background-color:#08244f;} .weather-condition .weather-detail img{content:url(images/night-big-icon.png)}');
+        }
+        document.write('<\/style>');
+    </script>
+
+</body>
+
+</html>
